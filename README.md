@@ -3,8 +3,8 @@
 VisionCart AI is a smart retail checkout and inventory management application combining a React + Vite frontend with a FastAPI computer vision backend and Supabase product lookup. Product detection uses a fine-tuned **YOLOv8n** object detection model trained on a custom **69-class grocery product dataset**, while pricing and discounts are fetched dynamically from Supabase.
 
 ## Live Deployment
-- **Frontend (Vercel):** `https://vision-smart-ai-retail-checkout-sys-mauve.vercel.app`
-- **Backend API (Vercel):** `https://vision-smart-ai-retail-checkout-sys.vercel.app` for swagger ui try:- `https://vision-smart-ai-retail-checkout-sys.vercel.app/docs`
+- **Frontend (Vercel):** [Open VisionCart AI Live](https://vision-smart-ai-retail-checkout-sys-mauve.vercel.app)
+- **Backend API (Vercel):** [Backend API](https://vision-smart-ai-retail-checkout-sys.vercel.app) ([Swagger Docs]( https://vision-smart-ai-retail-checkout-sys.vercel.app/docs))
 
 ## Model & Dataset Overview
 - **Primary Inference Model:** **YOLOv8n** (`yolov8n.pt` exported to `backend/best.onnx` for lightweight production inference)
@@ -13,7 +13,7 @@ VisionCart AI is a smart retail checkout and inventory management application co
 
 ## Dataset, Training & Project Archive (Google Drive)
 Because the complete dataset and model artifacts (~1.6 GB) exceed GitHub's single-file size limit, the full training workspace (`Grocery_CCP_Project`) is hosted on Google Drive:
-- **Google Drive Link:** `https://drive.google.com/drive/folders/1fWfCmHFDeWh6yyVVbiZ8uNpNR9RkkUDF?usp=sharing`
+- **Google Drive Link:** [Grocery_CCP_Project Drive Folder](https://drive.google.com/drive/folders/1fWfCmHFDeWh6yyVVbiZ8uNpNR9RkkUDF?usp=sharing)
 
 ### Google Drive Folder Structure (`Grocery_CCP_Project/`)
 ```text
