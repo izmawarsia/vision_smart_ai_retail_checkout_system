@@ -6,6 +6,8 @@ import {
   LoaderCircle, ImagePlus, RotateCcw
 } from "lucide-react";
 
+const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+
 const team = [
   { name: "Izma Warsia", roll: "CT-24311" },
   { name: "Safa Khurram", roll: "CT-24310" },
@@ -71,7 +73,7 @@ function App() {
     setScanning(true); setScanError(""); setScanMessage("");
     try {
       const body = new FormData(); body.append("file", file);
-      const response = await fetch("/scan-item", { method: "POST", body });
+      const response = await fetch(`${API_BASE}/scan-item`, { method: "POST", body });      
       const data = await response.json();
       if (!response.ok) throw new Error(data.detail || "The image could not be scanned.");
       if (!data.detected) setScanError(data.message || "No supported product was detected. Try a clearer front-label image.");
@@ -92,7 +94,7 @@ function App() {
     if (!items.length || billing) return;
     setBilling(true); setScanError("");
     try {
-      const response = await fetch("/generate-bill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ scanned_items: items.flatMap((item) => Array(item.quantity).fill(item.class_name)) }) });
+      const response = await fetch(`${API_BASE}/generate-bill`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ scanned_items: items.flatMap((item) => Array(item.quantity).fill(item.class_name)) }) });      
       const data = await response.json();
       if (!response.ok) throw new Error(data.detail || "Could not generate the bill.");
       const stamp = new Date();
