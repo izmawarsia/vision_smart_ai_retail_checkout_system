@@ -4,6 +4,7 @@ VisionCart AI is a smart retail checkout and inventory management application co
 
 ## Live Deployment
 - **Frontend (Vercel):** [Open VisionCart AI Live](https://vision-smart-ai-retail-checkout-sys-mauve.vercel.app)
+- - To test the UI with a sample conveyor belt input image, open the [testing_images](https://github.com/izmawarsia/vision_smart_ai_retail_checkout_system/tree/main/testing_images) folder in this repository and download an image to upload.
 - **Backend API (Vercel):** [Backend API](https://vision-smart-ai-retail-checkout-sys.vercel.app) ([Swagger Docs]( https://vision-smart-ai-retail-checkout-sys.vercel.app/docs))
 
 ## Model & Dataset Overview
